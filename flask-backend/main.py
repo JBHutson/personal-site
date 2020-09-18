@@ -2,8 +2,9 @@ import flask
 
 app = flask.Flask("__main__")
 
-@app.route("/")
-def my_index():
-    return flask.render_template("index.html", token="Hello, Flask+React")
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+    return flask.render_template('index.html')
 
 app.run(debug=True)

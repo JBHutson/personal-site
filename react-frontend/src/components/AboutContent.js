@@ -10,7 +10,7 @@ class AboutContent extends Component {
     render() {
         return (
             <React.Fragment>
-                <Header header={'About'}/>
+                <Header header={'About me'}/>
             </React.Fragment>
         );
     }
