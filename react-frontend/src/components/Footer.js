@@ -19,14 +19,6 @@ class Footer extends Component {
             <React.Fragment>
                 <footer className="footerFlex">
                     <section className="footContainer">
-                        <nav className="footerLinks">
-                            <Typography variant="h6">
-                                <Link to="/blog" className="link">Blog</Link>
-                            </Typography>
-                            <Typography variant="h6">
-                                <Link to="/tutorial" className="link">Tutorials</Link>
-                            </Typography>
-                        </nav>
                         <nav className="picLinks">
                             <a href="https://material-ui.com" title="Designed with Material-UI" className="img"><img src={mat}></img></a>
                             <a href="https://reactjs.org" title="Frontend with React" className="img"><img src={react}></img></a>

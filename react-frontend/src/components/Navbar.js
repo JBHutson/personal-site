@@ -1,33 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
-import Link from '@material-ui/core/Link';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Switch from '@material-ui/core/Switch';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import './Navbar.css'
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
     root : {
         flexGrow: 1,
     },
     icons: {
         flexGrow: 1,
     },
-});
+}));
 
-class Navbar extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const {classes} = this.props;
+function Navbar(props){
+    const classes = useStyles();
         return (
             <div class={classes.root}>
             <AppBar position="sticky">
@@ -38,8 +31,8 @@ class Navbar extends Component {
                             </Button>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" component={RouterLink} color="primary" to="/about">
-                                About
+                            <Button variant="contained" component={RouterLink} color="primary" to="/portfolio">
+                                Portfolio
                             </Button>
                         </Box>
                         <Box>
@@ -53,7 +46,7 @@ class Navbar extends Component {
                             </Button>
                         </Box>
                         <Box>
-                            <Switch/>
+                            <Switch checked={props.darkMode} onChange={() => props.setDarkMode(!props.darkMode)}/>
                         </Box>
                         <Box>
                             <AccountCircleIcon/>
@@ -63,6 +56,5 @@ class Navbar extends Component {
             </div>
         );
     }
-}
 
-export default withRouter(withStyles(styles, {withTheme: true})(Navbar));
+export default withRouter(Navbar);
