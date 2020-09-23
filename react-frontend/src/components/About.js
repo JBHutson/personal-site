@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import Paper from '@material-ui/core/Paper';
 import Navbar from './Navbar';
 import AboutContent from './AboutContent'
 import Footer from './Footer'
@@ -16,11 +17,7 @@ class AboutPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar/>
-                <main>
-                    <AboutContent/>
-                </main>
-                <Footer/>
+                <AboutContent/>
             </React.Fragment>
         );
     }

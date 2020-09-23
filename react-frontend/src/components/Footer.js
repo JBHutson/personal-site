@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 import react from './React.png'
 import post from './Postgres.png'
 import flask from './Flask.png'
@@ -19,8 +20,12 @@ class Footer extends Component {
                 <footer className="footerFlex">
                     <section className="footContainer">
                         <nav className="footerLinks">
-                            <Link to="/blog" className="link">Blog</Link>
-                            <Link to="/tutorial" className="link">Tutorials</Link>
+                            <Typography variant="h6">
+                                <Link to="/blog" className="link">Blog</Link>
+                            </Typography>
+                            <Typography variant="h6">
+                                <Link to="/tutorial" className="link">Tutorials</Link>
+                            </Typography>
                         </nav>
                         <nav className="picLinks">
                             <a href="https://material-ui.com" title="Designed with Material-UI" className="img"><img src={mat}></img></a>

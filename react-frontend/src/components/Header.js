@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
 import './Header.css'
 
 class Header extends Component {
@@ -12,14 +13,12 @@ class Header extends Component {
             return (
                 <React.Fragment>
                     <header>
-                        <div id="header">
-                            <h1>
-                                {this.props.header}
-                            </h1>
-                            <p className="subtitle">
-                                {this.props.subtitle}
-                            </p>
-                        </div>
+                        <Typography variant="h2">
+                            {this.props.header}
+                        </Typography>
+                        <Typography variant="h4">
+                            {this.props.subtitle}
+                        </Typography>
                     </header>
                 </React.Fragment>
             );
@@ -27,11 +26,9 @@ class Header extends Component {
             return (
                 <React.Fragment>
                     <header>
-                        <div id="header">
-                            <h1>
-                                {this.props.header}
-                            </h1>
-                        </div>
+                        <Typography variant="h2">
+                            {this.props.header}
+                        </Typography>
                     </header>
                 </React.Fragment>
             );
