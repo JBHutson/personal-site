@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Paper from '@material-ui/core/Paper';
-import Navbar from './Navbar';
-import Lead from './Lead';
-import Footer from './Footer';
+import Header from './Header';
+import FrontContent from './FrontContent';
 
-class FrontPage extends Component {
-    constructor(props) {
-        super(props);
-    }
+function FrontPage(){
 
-    render() {
-        return (
-            <React.Fragment>
-                <Lead/>
-            </React.Fragment>
-        );
-    }
+    return (
+        <React.Fragment>
+            <Header header="Hey! I'm James Hutson"/>
+            <FrontContent/>
+        </React.Fragment>
+    );
 }
 
 export default withRouter(FrontPage);

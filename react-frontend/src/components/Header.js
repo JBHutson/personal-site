@@ -1,39 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import './Header.css'
+import Box from '@material-ui/core/Box';
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-    }
 
-    render() {
-        if (this.props.subtitle) {
-            return (
-                <React.Fragment>
-                    <header>
+function Header(props) {
+
+    if (props.subtitle) {
+        return (
+            <React.Fragment>
+                <header>
+                    <Box display="flex" justifyContent="center" mt="2rem">
                         <Typography variant="h2">
-                            {this.props.header}
+                            {props.header}
                         </Typography>
+                    </Box>
+                    <Box display="flex" justifyContent="center">
                         <Typography variant="h4">
-                            {this.props.subtitle}
+                            {props.subtitle}
                         </Typography>
-                    </header>
-                </React.Fragment>
-            );
-        } else {
-            return (
-                <React.Fragment>
-                    <header>
-                        <Typography variant="h2">
-                            {this.props.header}
+                    </Box>
+                </header>
+            </React.Fragment>
+        );
+    } else {
+        return (
+            <React.Fragment>
+                <header>
+                    <Box display="flex" justifyContent="center" mt="2rem">
+                        <Typography variant="h2" paragraph="true">
+                            {props.header}
                         </Typography>
-                    </header>
-                </React.Fragment>
-            );
-        }
+                    </Box>
+                </header>
+            </React.Fragment>
+        );
     }
 }
+
 
 export default withRouter(Header);

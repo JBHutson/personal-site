@@ -7,19 +7,20 @@ import TutorialPage from './components/Tutorial';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Paper from '@material-ui/core/Paper';
-import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import './App.css';
+import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
 
 
 function App(){
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = createMuiTheme({
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
+  let theme = createMuiTheme({
     palette: {
       type: darkMode ? 'dark': 'light',
     },
   });
+  theme = responsiveFontSizes(theme);
 
     return (
       <BrowserRouter>
@@ -34,12 +35,35 @@ function App(){
               <Route path="/tutorial" component={TutorialPage} />
             </Switch>
           </main>
-        <Footer/>
+          <Footer/>
         </Paper>
         </MuiThemeProvider>
       </BrowserRouter>
     );
   };
+
+  function useLocalStorage(key, initValue){
+    const [storedValue, setStoredValue] = useState(() => {
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : initValue;
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    const setValue = value => {
+      try {
+        const valueToStore = value instanceof Function ? value(storedValue) : value;
+        setStoredValue(valueToStore);
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    return [storedValue, setValue];
+  }
 
 
 export default App;

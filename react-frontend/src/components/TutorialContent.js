@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from './Header';
 
-class TutorialContent extends Component {
-    constructor(props) {
-        super(props);
-    }
+function TutorialContent() {
 
-    render() {
-        return (
-            <React.Fragment>
-                <Header header={'Tutorials'} subtitle={"Tutorials I think would be useful"}/>
-            </React.Fragment>
-        );
-    }
+    return (
+        <React.Fragment>
+            <Header header={'Tutorials'} subtitle={"Tutorials I think would be useful"}/>
+        </React.Fragment>
+    );
 }
+
 
 export default withRouter(TutorialContent);
