@@ -18,6 +18,18 @@ function App(){
   let theme = createMuiTheme({
     palette: {
       type: darkMode ? 'dark': 'light',
+      primary: {
+        light: '#1769aa',
+        main: '#2196f3',
+        dark: '#4dabf5',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#af6200',
+        main: '#fb8c00',
+        dark: '#fba333',
+        contrastText: '#000',
+      },
     },
   });
   theme = responsiveFontSizes(theme);

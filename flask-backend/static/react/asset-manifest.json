@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/react/css/main.a8d46f71.chunk.css",
-    "main.js": "/static/react/js/main.029df84f.chunk.js",
-    "main.js.map": "/static/react/js/main.029df84f.chunk.js.map",
+    "main.css": "/static/react/css/main.75a9164e.chunk.css",
+    "main.js": "/static/react/js/main.c051fc7a.chunk.js",
+    "main.js.map": "/static/react/js/main.c051fc7a.chunk.js.map",
     "runtime-main.js": "/static/react/js/runtime-main.0e8d7494.js",
     "runtime-main.js.map": "/static/react/js/runtime-main.0e8d7494.js.map",
-    "js/2.dbff9929.chunk.js": "/static/react/js/2.dbff9929.chunk.js",
-    "js/2.dbff9929.chunk.js.map": "/static/react/js/2.dbff9929.chunk.js.map",
+    "js/2.3701d8d8.chunk.js": "/static/react/js/2.3701d8d8.chunk.js",
+    "js/2.3701d8d8.chunk.js.map": "/static/react/js/2.3701d8d8.chunk.js.map",
     "../../templates/index.html": "/static/react/../../templates/index.html",
-    "css/main.a8d46f71.chunk.css.map": "/static/react/css/main.a8d46f71.chunk.css.map",
-    "js/2.dbff9929.chunk.js.LICENSE.txt": "/static/react/js/2.dbff9929.chunk.js.LICENSE.txt",
+    "css/main.75a9164e.chunk.css.map": "/static/react/css/main.75a9164e.chunk.css.map",
+    "js/2.3701d8d8.chunk.js.LICENSE.txt": "/static/react/js/2.3701d8d8.chunk.js.LICENSE.txt",
     "media/Flask.png": "/static/react/media/Flask.04fe2ba1.png",
     "media/Material-ui.png": "/static/react/media/Material-ui.d2b1e190.png",
     "media/Octocat.png": "/static/react/media/Octocat.0ba2aa20.png",
     "media/Postgres.png": "/static/react/media/Postgres.50156c71.png",
     "media/React.png": "/static/react/media/React.8f65a033.png",
-    "precache-manifest.4cfb4e1dfeebc360d26ec9d4971ae422.js": "/static/react/precache-manifest.4cfb4e1dfeebc360d26ec9d4971ae422.js",
+    "precache-manifest.90f550f8228f30a3a11ca3ba4b607bc3.js": "/static/react/precache-manifest.90f550f8228f30a3a11ca3ba4b607bc3.js",
     "service-worker.js": "/static/react/service-worker.js"
   },
   "entrypoints": [
     "js/runtime-main.0e8d7494.js",
-    "js/2.dbff9929.chunk.js",
-    "css/main.a8d46f71.chunk.css",
-    "js/main.029df84f.chunk.js"
+    "js/2.3701d8d8.chunk.js",
+    "css/main.75a9164e.chunk.css",
+    "js/main.c051fc7a.chunk.js"
   ]
 }
