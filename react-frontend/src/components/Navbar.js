@@ -4,11 +4,13 @@ import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Switch from '@material-ui/core/Switch';
+import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
+import BrightnessLowIcon from '@material-ui/icons/BrightnessLow';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +26,6 @@ function Navbar(props){
     const theme = useTheme();
     let screenSize = useMediaQuery(theme.breakpoints.down('sm'));
     let changeSize = screenSize ? 'small': 'large';
-    let checked = props.darkMode ? 'Dark': 'Light';
     const classes = useStyles();
         return (
             <div class={classes.root}>
@@ -51,11 +52,9 @@ function Navbar(props){
                             </Button>
                         </Box>
                         <Box>
-                            <FormControlLabel
-                                control={<Switch checked={props.darkMode} onChange={() => props.setDarkMode(!props.darkMode)} size={changeSize}/>}
-                                label={checked}
-                                labelPlacement="bottom"
-                            />
+                            <IconButton onClick={() => {props.setDarkMode(!props.darkMode)}}>
+                                {props.darkMode ? <BrightnessLowIcon color="secondary"/>: <Brightness7Icon color="secondary"/>}
+                            </IconButton>
                         </Box>
                     </Toolbar>
             </AppBar>

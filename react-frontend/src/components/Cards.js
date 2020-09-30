@@ -3,9 +3,11 @@ import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import IconButton from '@material-ui/core/IconButton';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
@@ -18,7 +20,7 @@ const useStyles = makeStyles({
 function Cards(){
     const classes = useStyles();
     return (
-        <Grid container justify="center" spacing={4} className={classes.gridContainer}>
+        <Grid container spacing={4} className={classes.gridContainer}>
             <Grid item xs={12} sm={6} md={4}>
                 <Card raised="true">
                 <CardContent>
@@ -26,6 +28,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -35,6 +45,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -44,6 +62,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -53,6 +79,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -62,6 +96,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -71,6 +113,14 @@ function Cards(){
                         this is card
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
                 </Card>
             </Grid>
         </Grid>
