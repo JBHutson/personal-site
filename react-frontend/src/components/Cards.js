@@ -14,6 +14,8 @@ const useStyles = makeStyles({
     gridContainer: {
         paddingLeft: "2rem",
         paddingRight: "2rem",
+        margin: 0,
+        width: "100%",
     },
   });
 
