@@ -11,6 +11,8 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
+import Anime from 'react-anime';
+
 
 
 function App(){
@@ -41,10 +43,26 @@ function App(){
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
           <main>
             <Switch>
-              <Route exact path="/" component={FrontPage} />
-              <Route path="/portfolio" component={PortfolioPage} />
-              <Route path="/blog" component={BlogPage} />
-              <Route path="/tutorial" component={TutorialPage} />
+              <Route exact path="/">
+                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
+                  <FrontPage/>
+                </Anime>
+              </Route>
+              <Route path="/portfolio">
+                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
+                  <PortfolioPage/>
+                </Anime>
+              </Route>
+              <Route path="/blog">
+                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
+                  <BlogPage/>
+                </Anime>
+              </Route>
+              <Route path="/tutorial">
+                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
+                  <TutorialPage/>
+                </Anime>
+              </Route>
             </Switch>
           </main>
           <Footer/>
