@@ -8,15 +8,18 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Paper from '@material-ui/core/Paper';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
 import Anime from 'react-anime';
+import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
 
 
 
 function App(){
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
+
   let theme = createMuiTheme({
     palette: {
       type: darkMode ? 'dark': 'light',
@@ -34,12 +37,26 @@ function App(){
       },
     },
   });
+
+  const useStyles = makeStyles({
+    paper: {
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    space: {
+      flexGrow: 1
+    }
+  });
+
+  const classes = useStyles();
+
   theme = responsiveFontSizes(theme);
 
     return (
       <BrowserRouter>
       <MuiThemeProvider theme={theme}>
-        <Paper>
+        <Paper className={classes.paper}>
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
           <main>
             <Switch>
@@ -65,6 +82,7 @@ function App(){
               </Route>
             </Switch>
           </main>
+          <div className={classes.space}></div>
           <Footer/>
         </Paper>
         </MuiThemeProvider>

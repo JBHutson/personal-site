@@ -1,17 +1,30 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import react from './React.png'
-import post from './Postgres.png'
-import flask from './Flask.png'
-import git from './Octocat.png'
-import mat from './Material-ui.png'
+import Paper from '@material-ui/core/Paper';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import react from '../assets/React.png'
+import post from '../assets/Postgres.png'
+import flask from '../assets/Flask.png'
+import git from '../assets/Octocat.png'
+import mat from '../assets/Material-ui.png'
 import './Footer.css'
 
 
 function Footer() {
 
+    const theme = useTheme();
+
+    const useStyles = makeStyles({
+        paper: {
+            background: theme.palette.background.default,
+        },
+      });
+
+    const classes = useStyles();
+
     return (
         <React.Fragment>
+            <Paper className={classes.paper}>
             <footer className="footerFlex">
                 <section className="footContainer">
                     <nav className="picLinks">
@@ -23,6 +36,7 @@ function Footer() {
                     </nav>
                 </section>
             </footer>
+            </Paper>
         </React.Fragment>
     );
 }

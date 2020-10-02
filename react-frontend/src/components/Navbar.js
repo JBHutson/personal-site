@@ -14,9 +14,6 @@ import BrightnessLowIcon from '@material-ui/icons/BrightnessLow';
 
 
 const useStyles = makeStyles((theme) => ({
-    root : {
-        flexGrow: 1,
-    },
     icons: {
         flexGrow: 1,
     },
@@ -28,7 +25,6 @@ function Navbar(props){
     let changeSize = screenSize ? 'small': 'large';
     const classes = useStyles();
         return (
-            <div class={classes.root}>
             <AppBar position="sticky">
                     <Toolbar>
                         <Box className={classes.icons}>
@@ -58,7 +54,6 @@ function Navbar(props){
                         </Box>
                     </Toolbar>
             </AppBar>
-            </div>
         );
     }
 
