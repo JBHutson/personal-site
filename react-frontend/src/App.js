@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import PortfolioPage from './components/Portfolio';
-import BlogPage from './components/Blog';
-import FrontPage from './components/Front';
-import TutorialPage from './components/Tutorial';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Paper from '@material-ui/core/Paper';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import makeStyles from "@material-ui/core/styles/makeStyles";
@@ -13,12 +8,20 @@ import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 
 import Anime from 'react-anime';
-import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
+
+const PortfolioPage = lazy(() => import('./components/Portfolio'));
+const BlogPage = lazy(() => import('./components/Blog'));
+const FrontPage = lazy(() => import('./components/Front'));
+const TutorialPage = lazy(() => import('./components/Tutorial'));
+const Navbar = lazy(() => import('./components/Navbar'));
+const Footer = lazy(() => import('./components/Footer'));
 
 
 
 function App(){
-  const [darkMode, setDarkMode] = useLocalStorage('darkMode', false);
+  window.localStorage.clear();
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
+  const [darkMode, setDarkMode] = useLocalStorage('darkMode', prefersDarkMode);
 
   let theme = createMuiTheme({
     palette: {

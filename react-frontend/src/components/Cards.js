@@ -14,6 +14,7 @@ import Poker from './Poker.png';
 
 function Cards(){
     const theme = useTheme();
+
     const useStyles = makeStyles({
         gridContainer: {
             paddingLeft: "2rem",
@@ -38,8 +39,8 @@ function Cards(){
             <Grid item xs={12} sm={6} md={4}>
                 <Card raised="true">
                 <CardContent>
-                    <Typography variant="h2">
-                        this is card
+                    <Typography variant="h5">
+                        COVID-19 Dashboard
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -56,7 +57,24 @@ function Cards(){
                 <Card raised="true">
                 <CardContent>
                     <Typography variant="h2">
-                        this is card
+                        AccessSense
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <IconButton>
+                        <GitHubIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <OpenInNewIcon/>
+                    </IconButton>
+                </CardActions>
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Card raised="true">
+                <CardContent>
+                    <Typography variant="h5">
+                        StayClose
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -77,44 +95,14 @@ function Cards(){
                     <Typography variant="h5">
                         Poker Odds Calculator
                     </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Desktop GUI-based calculator that can give the hand and pot odds of any given Texas Hold'em hand. Built with
+                        Python and the PyQt framework.
+                    </Typography>
                 </CardContent>
                 <CardActions>
                     <IconButton href="https://github.com/JBHutson/Poker">
                         <GitHubIcon/>
-                    </IconButton>
-                </CardActions>
-                </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
-                <CardContent>
-                    <Typography variant="h2">
-                        this is card
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <IconButton>
-                        <GitHubIcon/>
-                    </IconButton>
-                    <IconButton>
-                        <OpenInNewIcon/>
-                    </IconButton>
-                </CardActions>
-                </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
-                <CardContent>
-                    <Typography variant="h2">
-                        this is card
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <IconButton>
-                        <GitHubIcon/>
-                    </IconButton>
-                    <IconButton>
-                        <OpenInNewIcon/>
                     </IconButton>
                 </CardActions>
                 </Card>

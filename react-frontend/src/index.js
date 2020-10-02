@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import './index.css';
@@ -12,7 +12,9 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
