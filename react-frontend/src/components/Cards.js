@@ -10,7 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Typography from '@material-ui/core/Typography';
-import Poker from './Poker.png';
+import Poker from '../assets/Poker.webp';
 
 function Cards(){
     const theme = useTheme();

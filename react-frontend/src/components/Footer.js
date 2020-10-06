@@ -2,11 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import react from '../assets/React.png'
-import post from '../assets/Postgres.png'
-import flask from '../assets/Flask.png'
-import git from '../assets/Octocat.png'
-import mat from '../assets/Material-ui.png'
+import react from '../assets/React.svg'
+import post from '../assets/Postgres.svg'
+import flask from '../assets/Flask.svg'
+import git from '../assets/Octocat.svg'
+import mat from '../assets/Material-ui.svg'
 import './Footer.css'
 
 
