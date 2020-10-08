@@ -6,6 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+flask-restful = "*"
+flask-pymongo = "*"
+mongoengine = "*"
+mongoengine-migrate = "*"
+flask-login = "*"
 
 [requires]
 python_version = "3.8"

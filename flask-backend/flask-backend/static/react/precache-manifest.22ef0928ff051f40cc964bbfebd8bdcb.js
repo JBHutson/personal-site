@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b5c0baf8551e49de5f55b5a401b14c4",
+    "revision": "4479327539cb5713fdcb9b5214275ad3",
     "url": "/static/react/../../templates/index.html"
   },
   {
-    "revision": "b5a601fe8b9d134a9f9a",
+    "revision": "77be123c8ce0d9366947",
     "url": "/static/react/css/4.95ba703c.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/react/js/3.36bdff7d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b5a601fe8b9d134a9f9a",
-    "url": "/static/react/js/4.a7c7452f.chunk.js"
+    "revision": "77be123c8ce0d9366947",
+    "url": "/static/react/js/4.f5a1edcc.chunk.js"
   },
   {
     "revision": "dd204e8b247eaabe23d5",
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/react/js/main.d1f523fc.chunk.js"
   },
   {
-    "revision": "28934ab41d23ec3b732b",
-    "url": "/static/react/js/runtime-main.8d0a8bb4.js"
+    "revision": "a311dad0cc30db07473c",
+    "url": "/static/react/js/runtime-main.518cd076.js"
   },
   {
     "revision": "6443bac72cec917ac8f3d06d9554d758",
@@ -68,16 +68,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/react/media/Material-ui.54637221.svg"
   },
   {
+    "revision": "f1ed6f82e03228a7523ff70687e0cc97",
+    "url": "/static/react/media/MongoDB.f1ed6f82.svg"
+  },
+  {
     "revision": "e92fe0a91b07c0c4851cb40ad9277646",
     "url": "/static/react/media/Octocat.e92fe0a9.svg"
   },
   {
     "revision": "67b5ee9a75328822504f30b1ea0afc51",
     "url": "/static/react/media/Poker.67b5ee9a.webp"
-  },
-  {
-    "revision": "45ae549356da6e003045695481c9b273",
-    "url": "/static/react/media/Postgres.45ae5493.svg"
   },
   {
     "revision": "58ef9bb0561912d03f957fab1e863ce0",
