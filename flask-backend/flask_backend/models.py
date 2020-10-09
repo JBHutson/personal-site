@@ -1,3 +1,4 @@
+from flask_backend import db
 from datetime import datetime
 
 class User(db.Document):

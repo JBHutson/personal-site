@@ -11,6 +11,9 @@ flask-pymongo = "*"
 mongoengine = "*"
 mongoengine-migrate = "*"
 flask-login = "*"
+flask-script = "*"
+flask-mongoengine = "*"
+flask-admin = "*"
 
 [requires]
 python_version = "3.8"
