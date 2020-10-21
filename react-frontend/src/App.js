@@ -1,13 +1,14 @@
 import React, { useState, lazy } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
+import Switch from 'react-router-dom/Switch';
+import Route from 'react-router-dom/Route';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Paper from '@material-ui/core/Paper';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
-
-import Anime from 'react-anime';
+import Article from './components/Article';
 
 const PortfolioPage = lazy(() => import('./components/Portfolio'));
 const BlogPage = lazy(() => import('./components/Blog'));
@@ -64,24 +65,19 @@ function App(){
           <main>
             <Switch>
               <Route exact path="/">
-                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
-                  <FrontPage/>
-                </Anime>
+                <FrontPage/>
               </Route>
               <Route path="/portfolio">
-                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
-                  <PortfolioPage/>
-                </Anime>
+                <PortfolioPage/>
+              </Route>
+              <Route path="/blog/:slug">
+                <Article/>
               </Route>
               <Route path="/blog">
-                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
-                  <BlogPage/>
-                </Anime>
+                <BlogPage/>
               </Route>
               <Route path="/tutorial">
-                <Anime opacity={[0, 1]} translateY={['100vh', 0]}>
-                  <TutorialPage/>
-                </Anime>
+                <TutorialPage/>
               </Route>
             </Switch>
           </main>

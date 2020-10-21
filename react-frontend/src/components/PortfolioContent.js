@@ -1,6 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import withRouter from 'react-router-dom/withRouter';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Grid from '@material-ui/core/Grid';
 import Header from './Header';
 import Cards from './Cards';

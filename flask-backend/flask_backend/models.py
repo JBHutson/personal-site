@@ -7,10 +7,14 @@ class User(db.Document):
     password = db.StringField(required=True)
     admin = db.BooleanField(default=False)
 
+class Content(db.EmbeddedDocument):
+    order_num = db.IntField(required=True)
+    content_type = db.StringField(required=True)
+    content = db.StringField(required=True)
 class Article(db.Document):
     title = db.StringField(required=True)
-    content = db.StringField(required=True)
-    publish_date = db.DateTimeField(default=datetime.utcnow)
+    content = db.ListField(db.EmbeddedDocumentField(Content), required=True)
+    publish_date = db.DateTimeField(default=datetime.utcnow())
     tags = db.ListField(db.StringField(), required=True)
     slug = db.StringField()
 

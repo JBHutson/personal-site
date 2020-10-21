@@ -1,7 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import withRouter from 'react-router-dom/withRouter';
+import Link from 'react-router-dom/Link';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import useTheme from '@material-ui/core/styles/useTheme';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -33,22 +34,22 @@ function Navbar(props){
             <AppBar position="sticky">
                     <Toolbar disableGutters={screenSize}>
                         <Box className={classes.icons}>
-                            <IconButton component={RouterLink} to="/" size={changeSize}>
+                            <IconButton component={Link} to="/" size={changeSize}>
                                 <HomeIcon color="secondary" size={changeSize}/>
                             </IconButton>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" color="primary" component={RouterLink} to="/portfolio" size={changeSize} className={classes.buttonText}>
+                            <Button variant="contained" color="primary" component={Link} to="/portfolio" size={changeSize} className={classes.buttonText}>
                                 Portfolio
                             </Button>
                         </Box>
                         <Box>
-                            <Button variant="contained" color="primary" component={RouterLink} to="/blog" size={changeSize} className={classes.buttonText}>
+                            <Button variant="contained" color="primary" component={Link} to="/blog" size={changeSize} className={classes.buttonText}>
                                 Blog
                             </Button>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" color="primary" component={RouterLink} to="/tutorial" size={changeSize} className={classes.buttonText}>
+                            <Button variant="contained" color="primary" component={Link} to="/tutorial" size={changeSize} className={classes.buttonText}>
                                 Tutorials
                             </Button>
                         </Box>
