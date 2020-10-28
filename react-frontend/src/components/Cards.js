@@ -12,6 +12,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Typography from '@material-ui/core/Typography';
 import Poker from '../assets/Poker.webp';
+import PersonalSite from '../assets/PersonalSite.webp';
+import Poster from '../assets/Poster.webp';
+import Access from '../assets/Access.webp';
 
 function Cards(){
     const theme = useTheme();
@@ -24,7 +27,7 @@ function Cards(){
             width: "100%",
         },
         media: {
-            height: 200,
+            height: 300,
         },
         card: {
             '&:hover': {
@@ -38,44 +41,73 @@ function Cards(){
     return (
         <Grid container spacing={4} className={classes.gridContainer}>
             <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
+                <Card raised="true" className={classes.card}>
                 <CardContent>
                     <Typography variant="h5">
-                        COVID-19 Dashboard
+                        COVID-19 Dashboard - In Development
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Desktop GUI-based calculator that can give the hand and pot odds of any given Texas Hold'em hand. Built with
+                        Python and the PyQt framework.
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <IconButton>
                         <GitHubIcon/>
                     </IconButton>
-                    <IconButton>
-                        <OpenInNewIcon/>
-                    </IconButton>
                 </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
+                <Card raised="true" className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={Access}
+                    title="Access"
+                />
                 <CardContent>
-                    <Typography variant="h2">
-                        AccessSense
+                    <Typography variant="h5">
+                        AccessSense - In Development
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Desktop GUI-based calculator that can give the hand and pot odds of any given Texas Hold'em hand. Built with
+                        Python and the PyQt framework.
+                    </Typography>
+                </CardContent>
+                </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+                <Card raised="true" className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={PersonalSite}
+                    title="Personal Site"
+                />
+                <CardContent>
+                    <Typography variant="h5">
+                        Personal Site
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Developer website, for displaying my portfolio and skills as well as blog posts. Built with Flask, React and
+                        Material-UI.
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <IconButton>
                         <GitHubIcon/>
                     </IconButton>
-                    <IconButton>
-                        <OpenInNewIcon/>
-                    </IconButton>
                 </CardActions>
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
+                <Card raised="true" className={classes.card}>
                 <CardContent>
                     <Typography variant="h5">
                         StayClose
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Social media application that allowed users to sequester their user experience by acquaintance group to allow
+                        for a more accurate digital representation of real life social circles. Built with Django, React and PostgreSQL.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -109,20 +141,21 @@ function Cards(){
                 </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-                <Card raised="true">
+                <Card raised="true" className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={Poster}
+                    title="Poster"
+                />
                 <CardContent>
-                    <Typography variant="h2">
-                        this is card
+                    <Typography variant="h5">
+                        Lick-o-Meter System
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        System for remotely monitoring behavioral experiments in rodents. Built with Arduino, Raspberry Pi,
+                        and Python
                     </Typography>
                 </CardContent>
-                <CardActions>
-                    <IconButton>
-                        <GitHubIcon/>
-                    </IconButton>
-                    <IconButton>
-                        <OpenInNewIcon/>
-                    </IconButton>
-                </CardActions>
                 </Card>
             </Grid>
         </Grid>

@@ -30,8 +30,23 @@ const useStyles = makeStyles({
         margin: 0,
         width: "100%",
     },
+    media16: {
+        height: "16rem"
+    },
+    media18: {
+        height: "18rem"
+    },
     media: {
         height: "20rem"
+    },
+    media22: {
+        height: "22rem"
+    },
+    media24: {
+        height: "24rem"
+    },
+    media28: {
+        height: "28rem"
     },
   });
 
@@ -63,7 +78,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media24}
                         image={Java}
                         title="Java"
                         />
@@ -77,7 +92,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media22}
                         image={JavaScript}
                         title="JavaScript"
                         />
@@ -91,7 +106,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media28}
                         image={HTML}
                         title="HTML"
                         />
@@ -105,7 +120,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media28}
                         image={CSS}
                         title="CSS"
                         />
@@ -126,7 +141,7 @@ function SkillsPage() {
                 <Grid item item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media24}
                         image={Django}
                         title="Django"
                         />
@@ -140,7 +155,7 @@ function SkillsPage() {
                 <Grid item item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media18}
                         image={Flask}
                         title="Flask"
                         />
@@ -168,7 +183,7 @@ function SkillsPage() {
                 <Grid item item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media16}
                         image={Material}
                         title="Material-ui"
                         />
@@ -224,7 +239,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media22}
                         image={Linux}
                         title="Linux"
                         />
@@ -238,7 +253,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media22}
                         image={MacOS}
                         title="MacOS"
                         />
@@ -252,7 +267,7 @@ function SkillsPage() {
                 <Grid item xs={12} sm={6} md={4} lg={3}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
-                        className={classes.media}
+                        className={classes.media18}
                         image={Git}
                         title="Git"
                         />
