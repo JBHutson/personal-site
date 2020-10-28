@@ -13,15 +13,17 @@ import Article from './components/Article';
 const PortfolioPage = lazy(() => import('./components/Portfolio'));
 const BlogPage = lazy(() => import('./components/Blog'));
 const FrontPage = lazy(() => import('./components/Front'));
-const TutorialPage = lazy(() => import('./components/Tutorial'));
+const SkillsPage = lazy(() => import('./components/Skills'));
 const Navbar = lazy(() => import('./components/Navbar'));
 const Footer = lazy(() => import('./components/Footer'));
 
 
 
 function App(){
-  window.localStorage.clear();
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
+  let prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)', { noSsr: true });
+  if (window.localStorage.getItem('darkmode')){
+    prefersDarkMode = window.localStorage.getItem('darkmode');
+  }
   const [darkMode, setDarkMode] = useLocalStorage('darkMode', prefersDarkMode);
 
   let theme = createMuiTheme({
@@ -76,8 +78,8 @@ function App(){
               <Route path="/blog">
                 <BlogPage/>
               </Route>
-              <Route path="/tutorial">
-                <TutorialPage/>
+              <Route path="/skills">
+                <SkillsPage/>
               </Route>
             </Switch>
           </main>

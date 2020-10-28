@@ -49,8 +49,8 @@ function Navbar(props){
                             </Button>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" color="primary" component={Link} to="/tutorial" size={changeSize} className={classes.buttonText}>
-                                Tutorials
+                            <Button variant="contained" color="primary" component={Link} to="/skills" size={changeSize} className={classes.buttonText}>
+                                Skills
                             </Button>
                         </Box>
                         <Box>
