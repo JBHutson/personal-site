@@ -58,7 +58,7 @@ function Cards(){
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <IconButton>
+                    <IconButton href="https://github.com/JBHutson/Covid-Dashboard">
                         <GitHubIcon/>
                     </IconButton>
                 </CardActions>
@@ -99,7 +99,7 @@ function Cards(){
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <IconButton>
+                    <IconButton href="https://github.com/JBHutson/personal-site">
                         <GitHubIcon/>
                     </IconButton>
                 </CardActions>
