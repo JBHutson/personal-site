@@ -25,12 +25,7 @@ function PortfolioContent() {
             <Header header={'Portfolio'}/>
             <Grid container justify="center" spacing={4} className={classes.gridContainer}>
                 <Grid item xs={12}>
-                    <SubHeader SubHeader={'Open-Source/Community Projects'}/>
-                </Grid>
-            </Grid>
-            <Grid container justify="center" spacing={4} className={classes.gridContainer}>
-                <Grid item xs={12}>
-                    <SubHeader SubHeader={'Personal Projects'}/>
+                    <SubHeader SubHeader={'Projects'}/>
                 </Grid>
             </Grid>
             <Cards/>

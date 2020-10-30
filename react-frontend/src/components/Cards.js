@@ -9,12 +9,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Typography from '@material-ui/core/Typography';
 import Poker from '../assets/Poker.webp';
 import PersonalSite from '../assets/PersonalSite.webp';
 import Poster from '../assets/Poster.webp';
 import Access from '../assets/Access.webp';
+import Covid from '../assets/COVID.webp';
 
 function Cards(){
     const theme = useTheme();
@@ -42,13 +42,19 @@ function Cards(){
         <Grid container spacing={4} className={classes.gridContainer}>
             <Grid item xs={12} sm={6} md={4}>
                 <Card raised="true" className={classes.card}>
+                <CardMedia
+                    className={classes.media}
+                    image={Covid}
+                    title="COVID"
+                />
                 <CardContent>
                     <Typography variant="h5">
                         COVID-19 Dashboard - In Development
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Desktop GUI-based calculator that can give the hand and pot odds of any given Texas Hold'em hand. Built with
-                        Python and the PyQt framework.
+                        Dashboard that displays statistics about COVID-19 over the entire world or based on geographical location. Based
+                        on data compiled by the Johns Hopkins Center for Systems Science and Engineering. Built with Flask, React, Material-UI
+                        and PostgreSQL.
                     </Typography>
                 </CardContent>
                 <CardActions>
@@ -70,8 +76,8 @@ function Cards(){
                         AccessSense - In Development
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Desktop GUI-based calculator that can give the hand and pot odds of any given Texas Hold'em hand. Built with
-                        Python and the PyQt framework.
+                        LoraWAN based test-bed that will allow for real-time data collection from disparate sensors and real-time data visualization
+                        from a central database. Built with Raspberry Pi, Arduino and ChirpStack.
                     </Typography>
                 </CardContent>
                 </Card>
