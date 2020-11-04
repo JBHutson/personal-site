@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import MarkdownRenderer from './MarkdownRenderer';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function Article(props) {
 
@@ -23,7 +24,9 @@ function Article(props) {
     return (
         <React.Fragment>
             <Box ml="auto" mr="auto">
-                {article ? article.content.map(articleContent => <MarkdownRenderer contentType={articleContent.content_type} content={articleContent.content}/>): 'Loading...'}
+                {article ? article.content.map(articleContent =>
+                <MarkdownRenderer contentType={articleContent.content_type} content={articleContent.content}/>): <CircularProgress color="secondary"/>
+                }
             </Box>
         </React.Fragment>
     );

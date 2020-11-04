@@ -39,17 +39,17 @@ function Navbar(props){
                             </IconButton>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" color="primary" component={Link} to="/portfolio" size={changeSize} className={classes.buttonText}>
+                            <Button variant="outlined" color="secondary" component={Link} to="/portfolio" size={changeSize} className={classes.buttonText}>
                                 Portfolio
                             </Button>
                         </Box>
                         <Box>
-                            <Button variant="contained" color="primary" component={Link} to="/blog" size={changeSize} className={classes.buttonText}>
+                            <Button variant="outlined" color="secondary" component={Link} to="/blog" size={changeSize} className={classes.buttonText}>
                                 Blog
                             </Button>
                         </Box>
                         <Box p={1}>
-                            <Button variant="contained" color="primary" component={Link} to="/skills" size={changeSize} className={classes.buttonText}>
+                            <Button variant="outlined" color="secondary" component={Link} to="/skills" size={changeSize} className={classes.buttonText}>
                                 Skills
                             </Button>
                         </Box>

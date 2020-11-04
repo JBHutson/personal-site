@@ -1,14 +1,18 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import useTheme from '@material-ui/core/styles/useTheme';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Typography from '@material-ui/core/Typography';
 import Header from './Header';
 import SubHeader from './SubHeader';
+import Particles from 'react-particles-js';
 import withRouter from 'react-router-dom/withRouter';
 
 function MarkdownRenderer(props) {
+    const theme = useTheme();
+
     switch (props.contentType) {
         case 'h2':
             return (
@@ -55,12 +59,23 @@ function MarkdownRenderer(props) {
             return(
                 <Grid container justify="center">
                     <Grid item xs={11} sm={9} md={7} lg={6}>
-                        <Typography variant="body1" paragraph="true">
-                            {props.content}
-                        </Typography>
+                        <Header header={props.content}/>
+                        <Particles
+                        params={{
+                                particles: {
+                                    color: {
+                                        value: theme.palette.primary.main,
+                                    },
+                                    links: {
+                                        color: theme.palette.primary.main,
+                                      },
+                                },
+                            }
+                        }
+                        />
                     </Grid>
                 </Grid>
-            )
+            );
     }
 }
 

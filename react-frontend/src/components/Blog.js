@@ -11,7 +11,9 @@ import DateTime from 'luxon/src/datetime';
 import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Header from './Header';
+import Button from '@material-ui/core/Button';
 
 function BlogPage() {
     const [articles, setArticles] = useState();
@@ -36,6 +38,15 @@ function BlogPage() {
             '&:hover': {
                 background: theme.palette.action.hover
             }
+        },
+        button: {
+            marginRight: "1rem"
+        },
+        progress: {
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
         }
       });
 
@@ -47,8 +58,8 @@ function BlogPage() {
             <Grid container spacing={4} className={classes.gridContainer} justify={"center"}>
                 {articles ? articles.map(article =>
                 <Grid item xs={12} md={10} lg={8}>
-                    <Link component={RouterLink} to={"/blog/" + article.slug}>
                     <Card raised="true" className={classes.card}>
+                        <Link component={RouterLink} to={"/blog/" + article.slug}>
                         <CardContent>
                             <Typography variant="h5">
                                 {article.title}
@@ -57,9 +68,16 @@ function BlogPage() {
                                 {DateTime.fromMillis(article.publish_date.$date).toLocaleString(DateTime.DATE_FULL)}
                             </Typography>
                         </CardContent>
+                        </Link>
+                        <CardContent>
+                            {article.tags.map(tag =>
+                                <Button variant="contained" color="primary" className={classes.button}>
+                                    {tag}
+                                </Button>
+                            )}
+                        </CardContent>
                     </Card>
-                    </Link>
-                </Grid>): <p>loading...</p>}
+                </Grid>): <CircularProgress color="secondary" className={classes.progress}/>}
             </Grid>
         </React.Fragment>
     );

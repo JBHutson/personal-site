@@ -6,7 +6,7 @@ from ..models import Article
 
 class getArticles(Resource):
     def get(self):
-        articles = Article.objects.values_list('title', 'publish_date', 'slug')
+        articles = Article.objects.values_list('title', 'publish_date', 'slug', 'tags')
         return jsonify(articles)
 
 class getArticle(Resource):
