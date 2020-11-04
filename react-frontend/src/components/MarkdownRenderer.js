@@ -51,6 +51,16 @@ function MarkdownRenderer(props) {
                     </Grid>
                 </Grid>
             );
+        case 'particle':
+            return(
+                <Grid container justify="center">
+                    <Grid item xs={11} sm={9} md={7} lg={6}>
+                        <Typography variant="body1" paragraph="true">
+                            {props.content}
+                        </Typography>
+                    </Grid>
+                </Grid>
+            )
     }
 }
 
