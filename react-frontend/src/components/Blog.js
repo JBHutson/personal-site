@@ -51,7 +51,13 @@ function BlogPage() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-        }
+        },
+        tags: {
+            paddingLeft: "16px",
+            paddingBottom: "16px",
+            paddingRight: "16px",
+            paddingTop: 0,
+        },
       });
 
     const classes = useStyles();
@@ -73,7 +79,7 @@ function BlogPage() {
                             </Typography>
                         </CardContent>
                         </Link>
-                        <CardContent>
+                        <CardContent className={classes.tags}>
                             {article.tags.map(tag =>
                                 <Button variant="contained" color="primary" className={classes.button}>
                                     {tag}

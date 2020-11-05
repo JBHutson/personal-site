@@ -13,7 +13,7 @@ function FrontPage(){
 
     return (
         <React.Fragment>
-            <Header header="Hey! I'm James Hutson"/>
+            <Header header="Hey! I'm James Hutson!"/>
             <Box ml="auto" mr="auto">
             <Grid container justify="center">
                 <Grid item xs={11} sm={9} md={7} lg={6}>
@@ -36,7 +36,7 @@ function FrontPage(){
                     <Typography variant="body1" paragraph="true">
                         So, while this is going to include the standard portfolio and about me pages, I will also be including articles on
                         topics I find interesting or I think don't have well-written and fleshed out explanations. What I want to focus on
-                        specifically is what I have 
+                        specifically is what I have
                     </Typography>
                 </Grid>
             </Grid>

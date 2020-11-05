@@ -2,6 +2,8 @@ import React from 'react';
 
 import withRouter from 'react-router-dom/withRouter';
 
+import Typist from 'react-typist';
+
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
@@ -14,7 +16,9 @@ function Header(props) {
                 <header>
                     <Box display="flex" justifyContent="center" mt="2rem">
                         <Typography variant="h2">
-                            {props.header}
+                            <Typist>
+                                {props.header}
+                            </Typist>
                         </Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
@@ -30,8 +34,10 @@ function Header(props) {
             <React.Fragment>
                 <header>
                     <Box display="flex" justifyContent="center" mt="2rem">
-                        <Typography variant="h2" paragraph="true">
-                            {props.header}
+                        <Typography variant="h2">
+                            <Typist>
+                                {props.header}
+                            </Typist>
                         </Typography>
                     </Box>
                 </header>
