@@ -1,15 +1,18 @@
 import React from 'react';
+
 import withRouter from 'react-router-dom/withRouter';
+
 import Paper from '@material-ui/core/Paper';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import useTheme from '@material-ui/core/styles/useTheme';
-import react from '../assets/React.svg'
-import mongo from '../assets/MongoDB.svg'
-import flask from '../assets/Flask.svg'
-import git from '../assets/Octocat.svg'
-import mat from '../assets/Material-ui.svg'
-import './Footer.css'
 
+import flask from '../assets/Flask.svg';
+import git from '../assets/Octocat.svg';
+import mat from '../assets/Material-ui.svg';
+import mongo from '../assets/MongoDB.svg';
+import react from '../assets/React.svg';
+
+import './Footer.css'
 
 function Footer() {
 

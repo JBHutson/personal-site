@@ -1,22 +1,24 @@
 import React, { useState, lazy } from 'react';
+
 import BrowserRouter from 'react-router-dom/BrowserRouter';
-import Switch from 'react-router-dom/Switch';
 import Route from 'react-router-dom/Route';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Paper from '@material-ui/core/Paper';
+import Switch from 'react-router-dom/Switch';
+
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import Paper from '@material-ui/core/Paper';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
-import Article from './components/Article';
-import Login from './components/Login';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-const PortfolioPage = lazy(() => import('./components/Portfolio'));
+const Article = lazy(() => import('./components/Article'))
 const BlogPage = lazy(() => import('./components/Blog'));
-const FrontPage = lazy(() => import('./components/Front'));
-const SkillsPage = lazy(() => import('./components/Skills'));
-const Navbar = lazy(() => import('./components/Navbar'));
 const Footer = lazy(() => import('./components/Footer'));
+const FrontPage = lazy(() => import('./components/Front'));
+const Login = lazy(() => import('./components/Login'))
+const Navbar = lazy(() => import('./components/Navbar'));
+const PortfolioPage = lazy(() => import('./components/Portfolio'));
+const SkillsPage = lazy(() => import('./components/Skills'));
 
 
 

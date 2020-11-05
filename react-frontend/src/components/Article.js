@@ -1,10 +1,14 @@
 import React from 'react';
-import axios from 'axios';
 import { useState, useEffect } from 'react';
+
 import { withRouter } from 'react-router-dom';
+
+import axios from 'axios';
+
 import Box from '@material-ui/core/Box';
-import MarkdownRenderer from './MarkdownRenderer';
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+import MarkdownRenderer from './MarkdownRenderer';
 
 function Article(props) {
 

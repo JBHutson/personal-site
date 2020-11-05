@@ -1,9 +1,12 @@
 import React from 'react';
+
 import withRouter from 'react-router-dom/withRouter';
-import Header from './Header';
+
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+
+import Header from './Header';
 import SubHeader from './SubHeader';
 
 function FrontPage(){

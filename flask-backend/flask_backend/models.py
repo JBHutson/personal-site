@@ -1,4 +1,5 @@
 from flask_backend import db
+
 from datetime import datetime
 from slugify import slugify
 

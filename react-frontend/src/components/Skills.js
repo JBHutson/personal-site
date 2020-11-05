@@ -1,13 +1,17 @@
 import React from 'react';
+
 import withRouter from 'react-router-dom/withRouter';
-import makeStyles from '@material-ui/core/styles/makeStyles';
-import Header from './Header';
-import Grid from '@material-ui/core/Grid';
-import SubHeader from './SubHeader';
+
 import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
+
+import Header from './Header';
+import SubHeader from './SubHeader';
+
 import Python from '../assets/Python.svg';
 import Java from '../assets/Java.svg';
 import JavaScript from '../assets/JavaScript.svg';

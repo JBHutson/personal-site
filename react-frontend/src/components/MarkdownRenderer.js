@@ -1,15 +1,19 @@
 import React from 'react';
+
+import withRouter from 'react-router-dom/withRouter';
+
+import Particles from 'react-particles-js';
+
 import Grid from '@material-ui/core/Grid';
-import useTheme from '@material-ui/core/styles/useTheme';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
+import useTheme from '@material-ui/core/styles/useTheme';
+
 import Header from './Header';
 import SubHeader from './SubHeader';
-import Particles from 'react-particles-js';
-import withRouter from 'react-router-dom/withRouter';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 
 function MarkdownRenderer(props) {
 

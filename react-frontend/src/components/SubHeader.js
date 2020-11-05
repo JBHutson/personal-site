@@ -1,7 +1,9 @@
 import React from 'react';
+
 import withRouter from 'react-router-dom/withRouter';
-import Typography from '@material-ui/core/Typography';
+
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 function SubHeader(props){
     return (

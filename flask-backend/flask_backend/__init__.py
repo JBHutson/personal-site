@@ -3,6 +3,7 @@ from flask_mongoengine import MongoEngine
 from flask_admin import Admin
 from flask_restful import Api
 from flask_admin.contrib.mongoengine import ModelView
+
 from config import config
 
 db = MongoEngine()

@@ -1,9 +1,14 @@
 import React,  {Suspense} from 'react';
+
 import ReactDOM from 'react-dom';
+
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import ThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import './index.css';
+
 import App from './App';
+
+import './index.css';
+
 import * as serviceWorker from './serviceWorker';
 
 const theme = createMuiTheme({
