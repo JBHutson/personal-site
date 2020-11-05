@@ -9,9 +9,27 @@ import Header from './Header';
 import SubHeader from './SubHeader';
 import Particles from 'react-particles-js';
 import withRouter from 'react-router-dom/withRouter';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
 function MarkdownRenderer(props) {
+
     const theme = useTheme();
+
+    const useStyles = makeStyles({
+        list: {
+            "list-style": "circle",
+        },
+        listItem: {
+            paddingTop: 0,
+            paddingBottom: 0,
+        },
+        listText: {
+            marginTop: 0,
+            marginBottom: 0,
+        }
+      });
+
+    const classes = useStyles();
 
     switch (props.contentType) {
         case 'h2':
@@ -31,14 +49,18 @@ function MarkdownRenderer(props) {
                 </Grid>
             )
         case 'list':
-            let items = props.content.split(":");
+            let items = props.content.split("::");
             return (
                 <Grid container justify="center">
                     <Grid item xs={11} sm={9} md={7} lg={6}>
-                        <List dense={true}>
+                        <List dense={true} className={classes.list}>
                             {items.map(item =>
-                                <ListItem dense={true}>
-                                    <ListItemText primary={item}/>
+                                <ListItem className={classes.listItem}>
+                                    <ListItemText className={classes.listText} primary={
+                                        <Typography variant="body1">
+                                            {item}
+                                        </Typography>
+                                    }/>
                                 </ListItem>
                             )}
                         </List>

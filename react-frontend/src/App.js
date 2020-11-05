@@ -9,6 +9,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
 import Article from './components/Article';
+import Login from './components/Login';
 
 const PortfolioPage = lazy(() => import('./components/Portfolio'));
 const BlogPage = lazy(() => import('./components/Blog'));
@@ -80,6 +81,9 @@ function App(){
               </Route>
               <Route path="/skills">
                 <SkillsPage/>
+              </Route>
+              <Route path="/login">
+                <Login/>
               </Route>
             </Switch>
           </main>

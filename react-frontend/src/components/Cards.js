@@ -91,7 +91,7 @@ function Cards(){
                 />
                 <CardContent>
                     <Typography variant="h5">
-                        Personal Site
+                        jameshutson.dev
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Developer website, for displaying my portfolio and skills as well as blog posts. Built with Flask, React and
