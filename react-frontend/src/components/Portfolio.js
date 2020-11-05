@@ -5,8 +5,8 @@ import withRouter from 'react-router-dom/withRouter';
 import Grid from '@material-ui/core/Grid';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-import Cards from './Cards';
 import Header from './Header';
+import Projects from './Projects'
 import SubHeader from './SubHeader';
 
 const useStyles = makeStyles({
