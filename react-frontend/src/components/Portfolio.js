@@ -32,7 +32,7 @@ function PortfolioPage() {
                     <SubHeader SubHeader={'Projects'}/>
                 </Grid>
             </Grid>
-            <Cards/>
+            <Projects/>
         </React.Fragment>
     );
 }
