@@ -4,7 +4,6 @@ import withRouter from 'react-router-dom/withRouter';
 
 import Grid from '@material-ui/core/Grid';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import Header from './Header';
@@ -12,20 +11,8 @@ import SubHeader from './SubHeader';
 
 function FrontPage(){
 
-    const useStyles = makeStyles({
-        mainPaper: {
-            marginTop: "2rem",
-            marginBottom: "2rem",
-        },
-      });
-
-    const classes = useStyles();
-
     return (
         <React.Fragment>
-            <Grid container justify="center">
-                <Grid item xs={11} sm={10} md={9} lg={8}>
-                <Paper elevation={10} className={classes.mainPaper}>
                 <Grid container justify="center">
                     <Grid item xs={10}>
                         <Header header="Hey! I'm James Hutson!"/>
@@ -67,9 +54,6 @@ Vivamus gravida turpis nec lacinia finibus. Proin ac tortor tortor. Donec conseq
                         </Typography>
                     </Grid>
                 </Grid>
-                </Paper>
-                </Grid>
-            </Grid>
         </React.Fragment>
     );
 }

@@ -31,7 +31,10 @@ function MarkdownRenderer(props) {
         listText: {
             marginTop: 0,
             marginBottom: 0,
-        }
+        },
+        card: {
+            marginBottom: "1rem"
+        },
       });
 
     const classes = useStyles();
@@ -86,7 +89,7 @@ function MarkdownRenderer(props) {
             return(
                 <Grid container justify="center">
                     <Grid item xs={11} md={10} lg={9}>
-                        <Card>
+                        <Card raised="true" className={classes.card}>
                             <Particles
                             params={{
                                     particles: {

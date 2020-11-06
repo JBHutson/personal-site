@@ -6,6 +6,7 @@ import Switch from 'react-router-dom/Switch';
 
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import GREY from '@material-ui/core/colors/GREY';
+import Grid from '@material-ui/core/Grid';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Paper from '@material-ui/core/Paper';
@@ -57,7 +58,12 @@ function App(){
     },
     space: {
       flexGrow: 1
-    }
+    },
+    mainPaper: {
+      marginTop: "2rem",
+      marginBottom: "2rem",
+      paddingTop: ".5rem",
+    },
   });
 
   const classes = useStyles();
@@ -69,29 +75,33 @@ function App(){
       <MuiThemeProvider theme={theme}>
         <Paper className={classes.paper}>
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
-          <main>
-            <Switch>
-              <Route exact path="/">
-                <FrontPage/>
-              </Route>
-              <Route path="/portfolio">
-                <PortfolioPage/>
-              </Route>
-              <Route path="/blog/:slug">
-                <Article/>
-              </Route>
-              <Route path="/blog">
-                <BlogPage/>
-              </Route>
-              <Route path="/skills">
-                <SkillsPage/>
-              </Route>
-              <Route path="/login">
-                <Login/>
-              </Route>
-            </Switch>
-          </main>
-          <div className={classes.space}></div>
+          <Grid container justify="center">
+                <Grid item xs={11} sm={10} md={9} lg={8}>
+                    <Paper elevation={10} className={classes.mainPaper}>
+                      <Switch>
+                        <Route exact path="/">
+                          <FrontPage/>
+                        </Route>
+                        <Route path="/portfolio">
+                          <PortfolioPage/>
+                        </Route>
+                        <Route path="/blog/:slug">
+                          <Article/>
+                        </Route>
+                        <Route path="/blog">
+                          <BlogPage/>
+                        </Route>
+                        <Route path="/skills">
+                          <SkillsPage/>
+                        </Route>
+                        <Route path="/login">
+                          <Login/>
+                        </Route>
+                      </Switch>
+                    </Paper>
+                  </Grid>
+              </Grid>
+            <div className={classes.space}></div>
           <Footer/>
         </Paper>
         </MuiThemeProvider>

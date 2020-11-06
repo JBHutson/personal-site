@@ -14,7 +14,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 
@@ -60,20 +59,12 @@ function BlogPage() {
             paddingRight: "16px",
             paddingTop: 0,
         },
-        mainPaper: {
-            marginTop: "2rem",
-            marginBottom: "2rem",
-            paddingTop: ".5rem",
-        },
       });
 
     const classes = useStyles();
 
     return (
         <React.Fragment>
-            <Grid container justify="center">
-                <Grid item xs={11} sm={10} md={9} lg={8}>
-                    <Paper elevation={10} className={classes.mainPaper}>
                     <Header header={'Blog'}/>
                         <Grid container spacing={4} className={classes.gridContainer} justify={"center"}>
                             {articles ? articles.map(article =>
@@ -99,9 +90,6 @@ function BlogPage() {
                                     </Card>
                                 </Grid>): <CircularProgress color="secondary" className={classes.progress}/>}
                         </Grid>
-                    </Paper>
-                </Grid>
-            </Grid>
         </React.Fragment>
     );
 }

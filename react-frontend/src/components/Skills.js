@@ -65,7 +65,7 @@ function SkillsPage() {
                 </Grid>
             </Grid>
             <Grid container spacing={4} className={classes.gridContainer}>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media}
@@ -79,7 +79,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media24}
@@ -93,7 +93,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media22}
@@ -107,7 +107,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media28}
@@ -121,7 +121,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media28}
@@ -142,7 +142,7 @@ function SkillsPage() {
                 </Grid>
             </Grid>
             <Grid container spacing={4} className={classes.gridContainer}>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media24}
@@ -156,7 +156,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media18}
@@ -170,7 +170,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media}
@@ -184,7 +184,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media16}
@@ -205,7 +205,7 @@ function SkillsPage() {
                 </Grid>
             </Grid>
             <Grid container spacing={4} className={classes.gridContainer}>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media}
@@ -219,7 +219,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media}
@@ -240,7 +240,7 @@ function SkillsPage() {
                 </Grid>
             </Grid>
             <Grid container spacing={4} className={classes.gridContainer}>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media22}
@@ -254,7 +254,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media22}
@@ -268,7 +268,7 @@ function SkillsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} lg={3}>
+                <Grid item xs={12} sm={6} md={4}>
                     <Card raised="true" className={classes.card}>
                         <CardMedia
                         className={classes.media18}
