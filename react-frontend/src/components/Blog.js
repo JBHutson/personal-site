@@ -39,13 +39,17 @@ function BlogPage() {
             margin: 0,
             width: "100%",
         },
+        tagGridContainer: {
+            margin: 0,
+            width: "100%",
+        },
         card: {
             '&:hover': {
                 background: theme.palette.action.hover
             }
         },
-        button: {
-            marginRight: "1rem"
+        tagCard: {
+            background: theme.palette.primary.main
         },
         progress: {
             position: "fixed",
@@ -81,11 +85,19 @@ function BlogPage() {
                                             </CardContent>
                                         </Link>
                                         <CardContent className={classes.tags}>
-                                        {article.tags.map(tag =>
-                                            <Button variant="contained" color="primary" className={classes.button}>
-                                                {tag}
-                                            </Button>
-                                        )}
+                                            <Grid container justify="left" spacing={2} className={classes.tagGridContainer}>
+                                                {article.tags.map(tag =>
+                                                <Grid item xs={11} sm={6} md={3}>
+                                                    <Card raised="true" className={classes.tagCard}>
+                                                        <CardContent>
+                                                            <Typography variant="body3">
+                                                                {tag}
+                                                            </Typography>
+                                                        </CardContent>
+                                                    </Card>
+                                                </Grid>
+                                                )}
+                                            </Grid>
                                         </CardContent>
                                     </Card>
                                 </Grid>): <CircularProgress color="secondary" className={classes.progress}/>}
