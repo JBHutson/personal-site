@@ -2,6 +2,7 @@ import React,  {Suspense} from 'react';
 
 import ReactDOM from 'react-dom';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import ThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
@@ -19,7 +20,9 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <Suspense fallback={<div></div>}>
-        <App />
+        <CssBaseline>
+          <App/>
+        </CssBaseline>
       </Suspense>
     </ThemeProvider>
   </React.StrictMode>,

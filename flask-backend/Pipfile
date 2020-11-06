@@ -15,6 +15,7 @@ flask-script = "*"
 flask-mongoengine = "*"
 flask-admin = "*"
 python-slugify = "*"
+blinker = "*"
 
 [requires]
 python_version = "3.8"

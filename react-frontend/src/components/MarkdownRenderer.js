@@ -4,6 +4,7 @@ import withRouter from 'react-router-dom/withRouter';
 
 import Particles from 'react-particles-js';
 
+import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -39,7 +40,7 @@ function MarkdownRenderer(props) {
         case 'h2':
             return (
                 <Grid container justify="center">
-                    <Grid item xs={11} sm={9} md={7} lg={6}>
+                    <Grid item xs={11} md={10} lg={9}>
                         <Header header = {props.content}/>
                     </Grid>
                 </Grid>
@@ -47,7 +48,7 @@ function MarkdownRenderer(props) {
         case 'h4':
             return(
                 <Grid container justify="center">
-                    <Grid item xs={11} sm={9} md={7} lg={6}>
+                    <Grid item xs={11} md={10} lg={9}>
                         <SubHeader SubHeader = {props.content}/>
                     </Grid>
                 </Grid>
@@ -56,7 +57,7 @@ function MarkdownRenderer(props) {
             let items = props.content.split("::");
             return (
                 <Grid container justify="center">
-                    <Grid item xs={11} sm={9} md={7} lg={6}>
+                    <Grid item xs={11} md={10} lg={9}>
                         <List dense={true} className={classes.list}>
                             {items.map(item =>
                                 <ListItem className={classes.listItem}>
@@ -74,7 +75,7 @@ function MarkdownRenderer(props) {
         case 'body':
             return (
                 <Grid container justify="center">
-                    <Grid item xs={11} sm={9} md={7} lg={6}>
+                    <Grid item xs={11} md={10} lg={9}>
                         <Typography variant="body1" paragraph="true">
                             {props.content}
                         </Typography>
@@ -84,21 +85,22 @@ function MarkdownRenderer(props) {
         case 'particle':
             return(
                 <Grid container justify="center">
-                    <Grid item xs={11} sm={9} md={7} lg={6}>
-                        <Header header={props.content}/>
-                        <Particles
-                        params={{
-                                particles: {
-                                    color: {
-                                        value: theme.palette.primary.main,
+                    <Grid item xs={11} md={10} lg={9}>
+                        <Card>
+                            <Particles
+                            params={{
+                                    particles: {
+                                        color: {
+                                            value: theme.palette.primary.main,
+                                        },
+                                        links: {
+                                            color: theme.palette.primary.main,
+                                          },
                                     },
-                                    links: {
-                                        color: theme.palette.primary.main,
-                                      },
-                                },
+                                }
                             }
-                        }
-                        />
+                            />
+                        </Card>
                     </Grid>
                 </Grid>
             );

@@ -14,6 +14,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import makeStyles from '@material-ui/core/styles/makeStyles';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import useTheme from '@material-ui/core/styles/useTheme';
 
@@ -26,6 +27,7 @@ function BlogPage() {
         axios.get('http://127.0.0.1:5000/api/articles')
         .then(res => {
             setArticles(res.data)
+            console.log(res.data)
         })
     }, [false])
 
@@ -58,36 +60,47 @@ function BlogPage() {
             paddingRight: "16px",
             paddingTop: 0,
         },
+        mainPaper: {
+            marginTop: "2rem",
+            marginBottom: "2rem",
+            paddingTop: ".5rem",
+        },
       });
 
     const classes = useStyles();
 
     return (
         <React.Fragment>
-            <Header header={'Blog'} subtitle={'Articles about various topics related to the tech industry'}/>
-            <Grid container spacing={4} className={classes.gridContainer} justify={"center"}>
-                {articles ? articles.map(article =>
-                <Grid item xs={12} md={10} lg={8}>
-                    <Card raised="true" className={classes.card}>
-                        <Link component={RouterLink} to={"/blog/" + article.slug}>
-                        <CardContent>
-                            <Typography variant="h5">
-                                {article.title}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {DateTime.fromMillis(article.publish_date.$date).toLocaleString(DateTime.DATE_FULL)}
-                            </Typography>
-                        </CardContent>
-                        </Link>
-                        <CardContent className={classes.tags}>
-                            {article.tags.map(tag =>
-                                <Button variant="contained" color="primary" className={classes.button}>
-                                    {tag}
-                                </Button>
-                            )}
-                        </CardContent>
-                    </Card>
-                </Grid>): <CircularProgress color="secondary" className={classes.progress}/>}
+            <Grid container justify="center">
+                <Grid item xs={11} sm={10} md={9} lg={8}>
+                    <Paper elevation={10} className={classes.mainPaper}>
+                    <Header header={'Blog'}/>
+                        <Grid container spacing={4} className={classes.gridContainer} justify={"center"}>
+                            {articles ? articles.map(article =>
+                                <Grid item xs={11}>
+                                    <Card raised="true" className={classes.card}>
+                                        <Link component={RouterLink} to={"/blog/" + article.slug}>
+                                            <CardContent>
+                                                <Typography variant="h5">
+                                                    {article.title}
+                                                </Typography>
+                                                <Typography variant="body2" color="textSecondary" component="p">
+                                                    {DateTime.fromMillis(article.publish_date.$date).toLocaleString(DateTime.DATE_FULL)}
+                                                </Typography>
+                                            </CardContent>
+                                        </Link>
+                                        <CardContent className={classes.tags}>
+                                        {article.tags.map(tag =>
+                                            <Button variant="contained" color="primary" className={classes.button}>
+                                                {tag}
+                                            </Button>
+                                        )}
+                                        </CardContent>
+                                    </Card>
+                                </Grid>): <CircularProgress color="secondary" className={classes.progress}/>}
+                        </Grid>
+                    </Paper>
+                </Grid>
             </Grid>
         </React.Fragment>
     );

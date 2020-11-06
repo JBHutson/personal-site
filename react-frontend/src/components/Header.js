@@ -9,33 +9,12 @@ import Typography from '@material-ui/core/Typography';
 
 
 function Header(props) {
-
-    if (props.subtitle) {
         return (
             <React.Fragment>
                 <header>
                     <Box display="flex" justifyContent="center" mt="2rem">
                         <Typography variant="h2">
-                            <Typist>
-                                {props.header}
-                            </Typist>
-                        </Typography>
-                    </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Typography variant="h4">
-                            {props.subtitle}
-                        </Typography>
-                    </Box>
-                </header>
-            </React.Fragment>
-        );
-    } else {
-        return (
-            <React.Fragment>
-                <header>
-                    <Box display="flex" justifyContent="center" mt="2rem">
-                        <Typography variant="h2">
-                            <Typist>
+                            <Typist cursor={{hideWhenDone: true, hideWhenDoneDelay: 3000}}>
                                 {props.header}
                             </Typist>
                         </Typography>
@@ -44,7 +23,6 @@ function Header(props) {
             </React.Fragment>
         );
     }
-}
 
 
 export default withRouter(Header);

@@ -5,6 +5,7 @@ import Route from 'react-router-dom/Route';
 import Switch from 'react-router-dom/Switch';
 
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import GREY from '@material-ui/core/colors/GREY';
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Paper from '@material-ui/core/Paper';
@@ -51,7 +52,8 @@ function App(){
     paper: {
       minHeight: '100vh',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      background: GREY[600],
     },
     space: {
       flexGrow: 1

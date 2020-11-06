@@ -19,8 +19,12 @@ def create_app(config_name):
 
     from .models import User, Article, Comment
     admin = Admin(app, name='personal', template_mode='bootstrap3')
+
+    class ArticleView(ModelView):
+        form_excluded_columns = ['slug']
+
     admin.add_view(ModelView(User))
-    admin.add_view(ModelView(Article))
+    admin.add_view(ArticleView(Article))
     admin.add_view(ModelView(Comment))
 
     from .api import api_bp as api_blueprint

@@ -19,10 +19,11 @@ class Article(db.Document):
     tags = db.ListField(db.StringField(), required=True)
     slug = db.StringField()
 
-    def __init__(self, *args, **kwargs):
-        if not 'slug' in kwargs:
-            kwargs['slug'] = slugify(kwargs.get('title', ''))
-        super().__init__(*args, **kwargs)
+    @classmethod
+    def slugify(cls, sender, document, **kwargs):
+        document.slug = slugify(document.title)
+
+db.pre_save.connect(Article.slugify, sender=Article)
 
 class Comment(db.Document):
     username = db.StringField(max_length=50, required=True)
