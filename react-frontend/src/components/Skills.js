@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Header from './Header';
 import SubHeader from './SubHeader';
 
+import C from '../assets/C.svg'
 import Python from '../assets/Python.svg';
 import Java from '../assets/Java.svg';
 import JavaScript from '../assets/JavaScript.svg';
@@ -75,6 +76,20 @@ function SkillsPage() {
                         <CardContent>
                             <Typography variant="h5">
                                 Python: Used on this site!
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Card raised="true" className={classes.card}>
+                        <CardMedia
+                        className={classes.media}
+                        image={C}
+                        title="C"
+                        />
+                        <CardContent>
+                            <Typography variant="h5">
+                                C
                             </Typography>
                         </CardContent>
                     </Card>
