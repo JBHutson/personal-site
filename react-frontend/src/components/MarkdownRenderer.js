@@ -44,7 +44,7 @@ function MarkdownRenderer(props) {
             return (
                 <Grid container justify="center">
                     <Grid item xs={11} md={10} lg={9}>
-                        <Header header = {props.content}/>
+                        <Header header = {props.content} size={props.contentType}/>
                     </Grid>
                 </Grid>
             );

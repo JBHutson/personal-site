@@ -58,7 +58,7 @@ function SkillsPage() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Header header={'Skills'}/>
+            <Header header={'Skills'} size={'h2'}/>
             <Grid container justify="center" spacing={4} className={classes.gridContainer}>
                 <Grid item xs={12}>
                     <SubHeader SubHeader={'Languages'}/>

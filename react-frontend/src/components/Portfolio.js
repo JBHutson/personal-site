@@ -26,7 +26,7 @@ function PortfolioPage() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Header header={'Portfolio'}/>
+            <Header header={'Portfolio'} size={'h2'}/>
             <Grid container justify="center" spacing={4} className={classes.gridContainer}>
                 <Grid item xs={12}>
                     <SubHeader SubHeader={'Projects'}/>

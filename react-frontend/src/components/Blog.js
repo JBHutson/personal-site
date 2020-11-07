@@ -69,7 +69,7 @@ function BlogPage() {
 
     return (
         <React.Fragment>
-                    <Header header={'Blog'}/>
+                    <Header header={'Blog'} size={'h2'}/>
                         <Grid container spacing={4} className={classes.gridContainer} justify={"center"}>
                             {articles ? articles.map(article =>
                                 <Grid item xs={11}>
