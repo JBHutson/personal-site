@@ -14,7 +14,7 @@ class Content(db.EmbeddedDocument):
     content = db.StringField(required=True)
 class Article(db.Document):
     title = db.StringField(required=True)
-    content = db.ListField(db.EmbeddedDocumentField(Content), required=True)
+    content = db.StringField(required=True)
     publish_date = db.DateTimeField(default=datetime.utcnow())
     tags = db.ListField(db.StringField(), required=True)
     slug = db.StringField()

@@ -8,7 +8,7 @@ import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-import MarkdownRenderer from './MarkdownRenderer';
+import Markdown from './Markdown';
 
 function Article(props) {
 
@@ -27,9 +27,9 @@ function Article(props) {
 
     return (
         <React.Fragment>
-                        {article ? article.content.map(articleContent =>
-                            <MarkdownRenderer contentType={articleContent.content_type} content={articleContent.content}/>): <CircularProgress color="secondary"/>
-                        }
+            {article ?
+                <Markdown>{article.content}</Markdown>: <CircularProgress color="secondary"/>
+            }
         </React.Fragment>
     );
 }
